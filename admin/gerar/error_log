@@ -1,0 +1,2 @@
+[05-Dec-2018 18:13:12 America/Sao_Paulo] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/musca/public_html/projetos/byit/admin/functions/db_connect.inc.php on line 3
+[24-Jan-2019 13:19:14 America/Sao_Paulo] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/musca/public_html/projetos/byit/admin/functions/db_connect.inc.php on line 3

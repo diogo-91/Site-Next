@@ -1,0 +1,1023 @@
+body{font-size: 100%; min-height: 100vh; font-family: 'Antenna'; width: 100%; float: left; clear: both; overflow-x: hidden;}
+textarea{height: 120px; resize: none;}
+select{-webkit-appearance: menulist-button;}
+._tr { -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -ms-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease; }
+._bc { -webkit-background-size:cover !important; -moz-background-size:cover !important; -o-background-size:cover !important; background-size:cover !important; }
+._nopad { padding:0; } ._nopt { padding-top:0 !important; } ._nopr { padding-right:0 !important; } ._nopb { padding-bottom:0 !important; } ._nopl { padding-left:0 !important; }
+.rotacao{image-rendering: optimizeQuality; -webkit-transition: all 500ms ease; -moz-transition: all 500ms ease; -ms-transition: all 500ms ease; -o-transition: all 500ms ease; transition: all 500ms ease;}
+.rotacao:hover{-moz-transform: rotate(360deg) translateX(1px) translateY(1px) skewX(1deg) skewY(1deg);-webkit-transform: rotate(360deg) translateX(1px) translateY(1px) skewX(1deg) skewY(1deg);-o-transform: rotate(360deg) translateX(1px) translateY(1px) skewX(1deg) skewY(1deg);-ms-transform: rotate(360deg) translateX(1px) translateY(1px) skewX(1deg) skewY(1deg);transform: rotate(360deg) translateX(1px) translateY(1px) skewX(1deg) skewY(1deg);}
+.centerR{position:relative; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%);}
+.centerV{position:relative; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%);}
+.centerA{position:absolute; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%);}
+.centerAll{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); -moz-transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%);}
+
+.imagem_white{
+	filter: brightness(0) invert(1);
+	-webkit-filter: brightness(0) invert(1);
+	-moz-filter: brightness(0) invert(1);
+	-o-filter: brightness(0) invert(1);
+	-e-filter: brightness(0) invert(1);
+}
+
+:root{
+	--cor-principal: #F00;
+}
+
+/* Cor da Seleção de Texto  */
+::selection{background:#98bc80; color:#FFF;}
+::-moz-selection{background:#98bc80; color:#FFF;}
+::-webkit-selection{background:#98bc80; color:#FFF;}
+
+
+/** Estrutura **/
+/** CSS das áreas do site que são iguais em todas as páginas **/
+.limitador {max-width: 1200px; width: 100%; height: auto; position: relative; margin: 0 auto;}
+.limitador_meio_right {width: 600px; float: right; position: relative;}
+.limitador_meio_left {width: 600px; float: left; position: relative;}
+.fontzero{font-size: 0px;}
+.show-desktop{display:block!important}.hide-desktop{display:none!important}
+
+/*::-webkit-scrollbar{width:5px; background:#335843; }
+::-webkit-scrollbar-track { background: #335843; }
+::-webkit-scrollbar-thumb { border-radius:5px; background:#01974B;  }*/
+
+/*::placeholder { }
+::-ms-input-placeholder { }
+::-ms-input-placeholder { }*/
+
+
+/** Páginas **/
+/** CSS para cada página do site **/
+
+.btn{font-size: 14px; color: #000; background: #98bc80; padding: 15px; border-radius: 14px; float: left; font-weight: 300; border:none; outline: none;}
+.btn:hover{opacity: 0.7 !important; cursor: pointer;}
+
+.btn i{margin-left: 3px;}
+
+.btn-azul{
+	color: #FFF;
+	background: #21a4b0; /* Old browsers */
+	background: -moz-linear-gradient(left, #21a4b0 0%, #5ba191 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #21a4b0 0%,#5ba191 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #21a4b0 0%,#5ba191 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21a4b0', endColorstr='#5ba191',GradientType=1 ); /* IE6-9 */
+}
+
+.btn-laranja{
+	color: #FFF;
+	background: #f68123; /* Old browsers */
+	background: -moz-linear-gradient(left, #f68123 0%, #f66523 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #f68123 0%,#f66523 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #f68123 0%,#f66523 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f68123', endColorstr='#f66523',GradientType=1 ); /* IE6-9 */
+}
+
+.btn-amarelo{
+	color: #000;
+	background: #eae982;
+}
+
+.btn-verde{
+	color: #FFF;
+	background: #48890b;
+}
+
+
+
+.overlay-mobile{background:#000; opacity:0.8; width: 100%; height: 100%; position: fixed; top:0px; bottom:0px; left:0px; right:0px; float:left; z-index:9999; display:none;}
+.hamburguer{width: 30px; float:left; position: absolute; z-index:99999; right:20px; top:27px; display:none;}
+.line{width: 100%; height:4px; background:#7cad5c; float:left; margin:3px 0px;}
+.hamburguerAtivo .line:nth-child(2){display:none;}
+.hamburguerAtivo .line:first-child{-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg); margin-top:7px;}
+.hamburguerAtivo .line:last-child{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg); margin-top:-7px;}
+.menu-responsive{height: 100vh; background:#025d8b; float: left; position: fixed; top:0px; left:0px; right:100%; z-index:9999; overflow: hidden;}
+.menu-responsive ul{color:#FFF; font-size: 16px; float:left; width: 100%; padding-top: 30px;}
+.menu-responsive ul li a{float:left; width: 100%; padding:10px 35px; -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -ms-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease;}
+.menu-responsive ul li a:hover{padding-left:35px; -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -ms-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease;}
+
+
+header{position: absolute; width: 100%; float: left; clear: both; top: 50px; z-index: 10;}
+header.interna{background: #FFF; position: relative; top: 0px; padding:40px 0px;}
+header img.logo{float: left;}
+header ul{float: left; margin-top: 15px; margin-left: 50px;}
+header ul li{float: left; margin: 0px 20px;}
+header ul li a{float: left; padding: 10px 0px; color: #FFF !important; font-weight: 300; font-size: 14px;}
+header.interna ul li a{color: #000 !important;}
+header ul li a:hover{border-bottom: 2px solid #84b825; color: #84b825 !important;}
+header.interna ul li a:hover{border-bottom: 2px solid #68b4a1; color: #68b4a1 !important;}
+header .btn{float: right; font-size: 12px; margin-left: 15px; margin-top: 10px;}
+
+
+.overlay-orcamento{display:none; width: 100%; height: 100vh; position: fixed; background: rgba(0,0,0,0.7); left: 0px; top: 0px; bottom: 0px; right: 0px; z-index: 10;}
+.modal-orcamento{display:none; width: 800px; position: fixed; z-index: 20;}
+.modal-orcamento .fechar{position: absolute; font-size: 30px; color: #FFF; right: 0px; top: -50px; cursor: pointer;}
+.modal-orcamento .fechar:hover{opacity: 0.7;}
+.modal-orcamento .conteudo{width: 100%; float: left; clear: both;}
+.modal-orcamento .orcamento{width: 100%; float: left; clear: both; padding:0px 50px;}
+.modal-orcamento .orcamento .lado1{width: 100%; float: left;}
+.modal-orcamento .orcamento .lado1 h3{float: left; clear: both; font-size: 34px; color: #43aaa4; font-weight: 900; margin-top: 50px;}
+.modal-orcamento .orcamento .lado1 h3 b{color: #FFF;}
+.modal-orcamento .orcamento .lado1 .texto{width: 100%; float: left; clear: both; padding-right: 90px; padding-top: 30px; font-size: 18px; line-height: 30px; font-weight: 300; color: #FFF;}
+.modal-orcamento .orcamento .lado1 .texto b{font-weight: 900; color: #43aaa4;}
+
+.modal-orcamento .orcamento .lado2{width: 50%; float: left; padding:30px 0px 50px 0px; padding-right: 10px;}
+.modal-orcamento .orcamento .form-group{width: 100%; float: left; clear: both; margin:6px 0px;}
+.modal-orcamento .orcamento .form-group label{width: 100%; float: left; clear: both; font-size: 12px; font-weight: 300; color: #FFF; margin-left: 10px; margin-bottom: 5px;}
+.modal-orcamento .orcamento .form-group input,
+.modal-orcamento .orcamento .form-group textarea{width: 100%; float: left; clear: both; font-size: 12px; font-weight: 300; color: #43aaa4; padding: 15px; border:none; border-radius: 15px; outline: none; border:2px solid transparent; font-family: 'Antenna';}
+.modal-orcamento .orcamento .form-group input:focus,
+.modal-orcamento .orcamento .form-group textarea:focus{border:2px solid #43aaa4;}
+.modal-orcamento .orcamento .form-title{width: 100%; float: left; clear: both; font-size: 12px; color: #FFF; font-weight: 300; margin-top: 17px;}
+.modal-orcamento .orcamento label.checkbox{float: left; margin-left: 0px; clear: initial; width: 30%; padding:15px 0px;}
+.modal-orcamento .orcamento label.checkbox input{float: left; width: auto; margin-left: 0px; width: 15px; height: 15px;}
+.modal-orcamento .orcamento label.checkbox:hover input{}
+.modal-orcamento .orcamento label.checkbox span{float: left; padding:2px 3px;}
+
+.modal-orcamento .orcamento .lado3{width: 50%; float: left; padding:30px 0px 50px 0px; padding-left: 10px;}
+.modal-orcamento .orcamento .lado3 .btn{width: 100%;}
+
+
+
+#banners{width: 100%; float: left; clear: both; position: relative;}
+#banners .banners{width: 100%; float: left; clear: both; position: relative;}
+#banners .banners .cada{width: 100%; height: 100vh; float: left; clear: both; position: relative;}
+#banners .banners .cada .limitador{height: 100vh;}
+#banners .banners .cada .box{width: 400px; float: right;}
+#banners .banners .cada .box h1{width: 100%; float: left; clear: both; font-size: 34px; font-weight: 900; color: #84b825; line-height: 40px;}
+#banners .banners .cada .box h2{width: 100%; float: left; clear: both; font-size: 34px; font-weight: 900; color: #98bc80; line-height: 40px;}
+#banners .banners .cada .box h3{width: 100%; float: left; clear: both; font-size: 16px; font-weight: 300; color: #FFF; padding:25px 0px; line-height: 20px;}
+#banners .scroll{cursor:pointer; width: 26px; height: 26px; background: url(../images/scroll.png) no-repeat center center; position: absolute; left: 50%; margin-left: -13px; bottom: 70px; z-index: 2; -webkit-animation: scroll 1s infinite;}
+
+/*#banners .owl-theme .owl-controls{position: absolute; right: 50px; top: 40vh;}
+#banners .owl-theme .owl-controls .owl-page{float: left; clear: both;}
+#banners .owl-theme .owl-controls .owl-page span{background: #84b825; opacity: 1; width: 20px; height: 20px;}
+#banners .owl-theme .owl-controls .owl-page.active span,
+#banners .owl-theme .owl-controls.clickable .owl-page:hover span{opacity: 1; background: #0daabe;}
+*/
+
+.owl-theme .owl-dots,
+.owl-theme .owl-nav{position: absolute; right: 50px; bottom: 150px;}
+.owl-theme .owl-dots .owl-dot{float: left; clear: both; outline: none;}
+.owl-theme .owl-dots .owl-dot span{background: #84b825 !important; opacity: 1; width: 20px !important; height: 20px !important;}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{opacity: 1; background: #0daabe !important;}
+
+
+#solucoes{width: 100%; float: left; clear: both; padding:50px 0px 100px 0px; position: relative;}
+#solucoes .limitador2{width: 90%; max-width: 1200px; float: left;}
+#solucoes .topo{width: 100%; float: left; clear: both; margin-bottom: 70px; padding-bottom: 30px; position: relative;}
+#solucoes .topo:before{content:""; width: 973px; height: 11px; position: absolute; bottom: 0px; left: 0px; background: url(../images/hr_horizontal.png) no-repeat center center;}
+#solucoes .topo .lado1{width: 40%; float: left; font-size: 34px; color: #025d8b; font-weight: 900;}
+#solucoes .topo .lado1 b{color: #7cad5c;}
+#solucoes .topo .lado2{width: 60%; float: left; padding: 50px; position: relative;}
+#solucoes .topo .lado2:before{content:""; width: 13px; height: 196px; background: url(../images/hr_vertical.png) no-repeat center center; left: 0px; top: 0px; position: absolute;}
+#solucoes .topo .lado2 span{width: 100%; float: left; clear: both; color: #565656; font-weight: 300; line-height: 30px;}
+#solucoes .topo .lado2 .btn{background: #025d8b; clear: both; margin-top: 10px;}
+
+#solucoes .baixo{width: 100%; float: left; clear: both;}
+#solucoes .baixo h1{width: 100%; float: left; clear: both; font-size: 34px; color: #025d8b;}
+#solucoes .baixo h1 b{color: #43aaa4;}
+#solucoes .baixo .todos{width: 100%; float: left; text-align:center; clear: both; margin-top: 50px}
+#solucoes .baixo .todos .cada{width: 20%; float: none; display: inline-block; margin-right: 4%; margin-bottom: 4%; height: 250px;}
+#solucoes .baixo .todos .cada .imagem{width: 120px; height: 120px; position: relative; left: 50%; margin-left: -60px; background: #ededed; border-radius: 100%; position: relative;}
+#solucoes .baixo .todos .cada .titulo{width: 100%; float: left; clear: both; text-align: center; font-size: 16px; line-height: 22px; font-weight: 900; color: #0b628f; padding-top: 10px;}
+#solucoes .baixo .todos .cada .titulo b{color: #43aaa4;}
+
+#solucoes .baixo .todos .cada:hover .imagem{background: #84b825;}
+#solucoes .baixo .todos .cada:hover .imagem img{-webkit-filter: brightness(0) invert(1);}
+#solucoes .baixo .todos .cada:hover .titulo{color: #000;}
+#solucoes .baixo .todos .cada:hover .titulo b{color: #000;}
+
+#solucoes img.trecos{position: absolute; right: -150px; top: 0px; z-index: -1;}
+
+
+#solucoes_veja{width: 100%; float: left; clear: both; height: 440px; position: relative; z-index: 2; margin-bottom: -100px;}
+#solucoes_veja h4{width: 100%; float: left; clear: both; font-size: 34px; line-height: 40px; color: #FFF; margin-top: 120px; text-align: center; margin-bottom: 20px}
+#solucoes_veja h4 b{color: #eae982;}
+#solucoes_veja .btn{margin-top: 10px;}
+
+
+#produtos_home{width: 100%; float: left; clear: both; background: #eeeeee; padding-bottom: 150px; padding-top: 120px; margin-top: -2px; position: relative; z-index: 1;}
+#produtos_home .topo{width: 100%; float: left; clear: both; margin-bottom: 70px; padding-bottom: 50px; position: relative;}
+#produtos_home .topo:before{content:""; width: 973px; height: 11px; position: absolute; bottom: 0px; left: 0px; background: url(../images/hr_horizontal.png) no-repeat center center;}
+#produtos_home .topo .lado1{width: 40%; float: left; font-size: 34px; color: #025d8b; font-weight: 900; padding-top: 30px;}
+#produtos_home .topo .lado1 b{color: #7cad5c;}
+#produtos_home .topo .lado2{width: 60%; float: left; padding: 20px 50px; position: relative;}
+#produtos_home .topo .lado2:before{content:""; width: 13px; height: 196px; background: url(../images/hr_vertical.png) no-repeat center center; left: 0px; top: 0px; position: absolute;}
+#produtos_home .topo .lado2 span{width: 100%; float: left; clear: both; color: #565656; font-weight: 300; line-height: 30px;}
+#produtos_home .topo .lado2 .btn{background: #025d8b; clear: both; margin-top: 10px;}
+#produtos_home .baixo{width: 100%; float: left; clear: both;}
+#produtos_home .baixo h1{width: 100%; float: left; clear: both; font-size: 34px; color: #0b628f;}
+#produtos_home .baixo h1 b{color: #43aaa4;}
+
+
+
+.wrap_produtos{width: 100%; float: left; clear: both; padding: 20px 0px;}
+.wrap_produtos .cada{width: 23%; float: left; margin-right: 2%; margin-top: 15px}
+.wrap_produtos .cada .imagem{width: 100%; height: 190px; background: #FFF; position: relative; border-radius: 15px;}
+.wrap_produtos .cada .imagem img{max-width: 90%; max-height: 90%;}
+.wrap_produtos .cada .titulo{width: 100%; float: left; clear: both; font-size: 16px; font-weight: 300; color: #0b628f; padding: 10px; padding-top: 25px;}
+.wrap_produtos .cada .subtitulo{width: 100%; float: left; clear: both; font-size: 16px; font-weight: 900; color: #0b628f; padding: 10px; padding-top: 30px;height: 70px;}
+.wrap_produtos .cada .descricao{width: 100%; float: left; clear: both; font-size: 14px; color: #565656; padding: 10px; padding-bottom: 20px; padding-top: 10px; font-weight: 300;height: 70px;}
+.wrap_produtos .cada .valor{width: 100%; float: left; clear: both; font-size: 14px; color: #5c5c5c; padding: 10px;}
+.wrap_produtos .cada .valor b{color: #35393b;font-size: 19px;}
+.wrap_produtos .cada:hover{opacity: 0.7 !important;}
+
+#novidades{width: 100%; float: left; clear: both; padding:70px 0px 150px 0px}
+#novidades h1{width: 100%; float: left; clear: both; text-align: center; font-size: 34px; font-weight: 900; color: #0b628f; padding: 50px 0px; position: relative;}
+#novidades h1 b{color: #7cad5c;}
+#novidades h1:before{content:""; width: 312px; height: 7px; position: absolute; background: url(../images/h1_1.png) no-repeat center center; left: 0px; top: 67px;}
+#novidades h1:after{content:""; width: 312px; height: 7px; position: absolute; background: url(../images/h1_2.png) no-repeat center center; right: 0px; top: 67px;}
+#novidades .todos{width: 100%; float: left; clear: both; margin-top: 40px;}
+#novidades .todos .cada{width:28%; float: left; margin: 0px 14px;}
+#novidades .todos .cada .imagem{width: 100%; float: left; clear: both; height: 250px; border-radius: 15px;}
+#novidades .todos .cada .titulo{width: 100%; float: left; font-size: 16px; font-weight: 900; padding: 15px 0px 10px 0px; color: #202020;height: 90px;}
+#novidades .todos .cada .descricao{width: 100%; float: left; clear: both; font-size: 14px; font-weight: 300; color: #202020; line-height: 22px;height: 90px;}
+#novidades .todos a:last-child .cada{margin-right: 0px;}
+#novidades .todos .cada:hover{opacity: 0.7 !important;}
+#novidades .btn{margin-top: 50px;}
+
+footer{width: 100%; float: left; clear: both; background: url(../images/bg_footer.jpg) no-repeat center center; position: relative; padding: 130px 0px 50px 0px;}
+footer:before{content:""; width: 363px; height: 74px; background: url(../images/treco_footer.png) no-repeat center center; position: absolute; left: 50%; margin-left:-181.5px; top: -1px;}
+
+footer .topo{width: 100%; float: left; clear: both;}
+footer .topo img{float: left;}
+footer .topo h2{float: right; font-size: 34px; color: #2caae0; font-weight: 900; margin:10px 60px;}
+footer .topo h2 b{color: #93c122;}
+footer .topo form{float: right; margin-top: 20px;}
+footer .topo form .group{float: left; padding:0px 2.5px;}
+footer .topo form label{float: left; clear: both; font-size: 12px; color: #FFF; font-weight: 300; margin-bottom: 5px; margin-left: 10px;}
+footer .topo form input{float: left; clear: both; font-size: 14px; color: #000; font-weight: 300; padding: 12px; border-radius: 15px; border:2px solid transparent; outline: none;}
+footer .topo form input:focus{border:2px solid #93c122;}
+footer .topo form button{margin-top: 18px; margin-left: 2.5px;}
+
+footer .baixo{width: 100%; float: left; clear: both; margin-top: 80px;}
+footer .baixo .cada{float: left; color: #FFF;}
+footer .baixo .cada h2{width: 100%; float: left; clear: both; font-size: 16px; font-weight: 900; margin-bottom: 15px;}
+footer .baixo .cada ul{width: 100%; float: left; clear: both;}
+footer .baixo .cada ul li{float: left; clear: both; font-size: 14px; font-weight: 300; margin:5px 0px;}
+footer .baixo .cada ul li a{float: left; clear: both; color: #d5d5d5;}
+footer .baixo .cada ul li a:hover{opacity: 0.7 !important;}
+
+footer .baixo .cada.cadaPaginas{width: 25%;}
+footer .baixo .cada.cadaPostagens{width: 35%; padding-right: 30px;}
+footer .baixo .cada.cadaFale{width: 20%;}
+footer .baixo .cada.cadaEndereco{width: 20%;}
+
+footer .baixo .cada.cadaFale h2{color: #21a4af;}
+footer .baixo .cada.cadaFale ul li:nth-child(1){color: #21a4af;}
+footer .baixo .cada.cadaFale ul li:nth-child(2){color: #21a4af;}
+footer .baixo .cada.cadaFale .btn{margin-top: 10px;}
+
+footer .baixo .cada.cadaEndereco h2{color: #ea8e44;}
+footer .baixo .cada.cadaEndereco .btn{margin-top: 10px;}
+
+
+footer .copy{width: 100%; float: left; clear: both; text-align: center; font-size: 11px; color: #778199; font-weight: 300; margin-top: 100px; margin-bottom: 40px}
+footer .copy a{color: #4bd174; font-weight: 300;}
+footer .copy a:hover{color: #fff;}
+
+
+
+
+
+
+
+
+#servicos{width: 100%; float: left; clear: both;}
+#servicos .cabecalho{width: 100%; height: 340px; position: relative; float: left; clear: both; background: url(../images/bg_servico_cabecalho.png) no-repeat bottom center;}
+#servicos .cabecalho:before{content:""; width: 26px; height: 26px; background: url(../images/scroll.png) no-repeat center center; position: absolute; left: 50%; margin-left: -13px; bottom: 50px;}
+#servicos .cabecalho .limitador{height: 265px;}
+#servicos .cabecalho .icone{width: 70px; float: left;}
+#servicos .cabecalho .titulo{width: 410px; float: left; font-size: 34px; color: #84b825; line-height: 40px; font-weight: 900;}
+#servicos .cabecalho .descricao{width: 560px; float: left; font-size: 24px; top: 50%; color: #FFF; font-weight: 300; line-height: 32px; padding-left: 20px;}
+#servicos .cabecalho .btn{float: right;}
+
+
+
+#servicos .sec_video{width: 100%; float: left; clear: both; padding: 0px 0px; background: #ededed; margin-top: -190px;}
+#servicos .sec_video .lado1{width: 50%; float: left;padding: 100px 0 0;}
+#servicos .sec_video .lado2{width: 50%; float: left; min-height: 800px;}
+
+
+ul.breadcumb{float: left; font-size: 10px; font-weight: 300; clear: both; margin:50px 0px; width: 100%;}
+ul.breadcumb li{float: left; margin:0px 2px; color:#84b825;}
+ul.breadcumb li a{float: left; color: #0b628f; text-decoration: none;}
+ul.breadcumb li a:hover{opacity: 0.7;}
+
+#servicos .sec_video .lado1 h2{float: left; clear: both; font-size: 18px; font-weight: 900; color: #4d4d4d; margin-top: 40px;}
+#servicos .sec_video .lado1 .descricao{width: 100%; float: left; clear: both; padding:20px 50px 20px 0px; font-size: 16px; font-weight: 300; line-height: 24px; color: #565656;}
+
+
+#servicos .sec_video .lado2 .play{position: absolute; left: 50%; margin-left: -50px; top: 160px; padding:60px; border:1px solid #7eb44b; border-radius: 100%; cursor: pointer; display: block;}
+#servicos .sec_video .lado2 .play:hover{border:3px solid #7eb44b; top:153px; margin-left: -57px; padding: 65px;}
+#servicos .sec_video .lado2 .play:hover img{-webkit-transform: scale(1.2);}
+
+
+#servicos .sec_textos{width: 100%; float: left; clear: both; padding: 40px 0px;}
+#servicos .sec_textos .cada{width: 100%; float: left; padding-right: 100px; margin:30px 0px;}
+#servicos .sec_textos .cada .topo{width: 100%; float: left; clear: both;}
+#servicos .sec_textos .cada .topo .icone{width: 40px; float: left; color: #84b825; font-size: 26px;}
+#servicos .sec_textos .cada .topo h3{width: calc(100% - 45px); float: left; font-size: 16px; font-weight: 900; color: #4d4d4d; margin-top: 7px;}
+#servicos .sec_textos .cada .descricao{width: 100%; float: left; clear: both; font-size: 16px; font-weight: 300; color: #565656; padding: 10px 0px; line-height: 26px;}
+
+
+
+#servicos .orcamento{width: 100%; float: left; clear: both; min-height: 545px;}
+#servicos .orcamento .lado1{width: 40%; float: left;}
+#servicos .orcamento .lado1 h3{float: left; clear: both; font-size: 34px; color: #43aaa4; font-weight: 900; margin-top: 100px;}
+#servicos .orcamento .lado1 h3 b{color: #FFF;}
+#servicos .orcamento .lado1 .texto{width: 100%; float: left; clear: both; padding-right: 90px; padding-top: 30px; font-size: 18px; line-height: 30px; font-weight: 300; color: #FFF;}
+#servicos .orcamento .lado1 .texto b{font-weight: 900; color: #43aaa4;}
+
+#servicos .orcamento .lado2{width: 30%; float: left; padding:80px 0px; padding-right: 10px;}
+#servicos .orcamento .form-group{width: 100%; float: left; clear: both; margin:6px 0px;}
+#servicos .orcamento .form-group label{width: 100%; float: left; clear: both; font-size: 12px; font-weight: 300; color: #FFF; margin-left: 10px; margin-bottom: 5px;}
+#servicos .orcamento .form-group input,
+#servicos .orcamento .form-group textarea{width: 100%; float: left; clear: both; font-size: 12px; font-weight: 300; color: #43aaa4; padding: 15px; border:none; border-radius: 15px; outline: none; border:2px solid transparent; font-family: 'Antenna';}
+#servicos .orcamento .form-group input:focus,
+#servicos .orcamento .form-group textarea:focus{border:2px solid #43aaa4;}
+#servicos .orcamento .form-title{width: 100%; float: left; clear: both; font-size: 12px; color: #FFF; font-weight: 300; margin-top: 17px;}
+#servicos .orcamento label.checkbox{float: left; margin-left: 0px; clear: initial; width: 25%; padding:15px 0px;}
+#servicos .orcamento label.checkbox input{float: left; width: auto; margin-left: 0px; width: 15px; height: 15px;}
+#servicos .orcamento label.checkbox:hover input{}
+#servicos .orcamento label.checkbox span{float: left; padding:2px 3px;}
+
+#servicos .orcamento .lado3{width: 30%; float: left; padding:80px 0px; padding-left: 10px;}
+#servicos .orcamento .lado3 .btn{width: 100%;}
+
+
+#servicos .sec_vejatbm{width: 100%; float: left; clear: both; padding: 50px 0px;}
+#servicos .sec_vejatbm h2{width: 100%; float: left; clear: both; font-size: 34px; color: #0b628f; font-weight: 900; margin:50px 0px;}
+#servicos .sec_vejatbm h2 b{color: #43aaa4;}
+#servicos .sec_vejatbm .todos_slides{width: 100%; float: left; clear: both; position: relative; margin-bottom: 50px;}
+#servicos .sec_vejatbm .todos_slides .arrow-left{position: absolute; left:-50px; font-size: 30px; color: #43aaa4; top: 70px; cursor: pointer;}
+#servicos .sec_vejatbm .todos_slides .arrow-right{position: absolute; right:-50px; font-size: 30px; color: #43aaa4; top: 70px; cursor: pointer;}
+#servicos .sec_vejatbm .todos_slides .arrow-left:hover,
+#servicos .sec_vejatbm .todos_slides .arrow-right:hover{opacity: 0.7 !important;}
+
+#servicos .sec_vejatbm .todos_slides .slides{width: 100%; float: left; clear: both;}
+
+#servicos .sec_vejatbm .todos_slides .slides .cada{width: 100%; float: left; margin-right: 4%; margin-bottom: 4%;}
+#servicos .sec_vejatbm .todos_slides .slides .cada .imagem{width: 120px; height: 120px; position: relative; left: 50%; margin-left: -60px; background: #ededed; border-radius: 100%; position: relative;}
+#servicos .sec_vejatbm .todos_slides .slides .cada .imagem img{width: auto !important;}
+#servicos .sec_vejatbm .todos_slides .slides .cada .titulo{width: 100%; float: left; clear: both; text-align: center; font-size: 16px; line-height: 22px; font-weight: 900; color: #0b628f; padding-top: 10px;}
+#servicos .sec_vejatbm .todos_slides .slides .cada .titulo b{color: #43aaa4;}
+
+#servicos .sec_vejatbm .todos_slides .slides .cada:hover .imagem{background: #84b825;}
+#servicos .sec_vejatbm .todos_slides .slides .cada:hover .imagem img{-webkit-filter: brightness(0) invert(1);}
+#servicos .sec_vejatbm .todos_slides .slides .cada:hover .titulo{color: #000;}
+#servicos .sec_vejatbm .todos_slides .slides .cada:hover .titulo b{color: #000;}
+
+
+
+
+
+
+#sobre{width: 100%; float: left; clear: both;}
+#sobre .cabecalho{width: 100%; height: 340px; position: relative; float: left; clear: both; background: url(../images/bg_servico_cabecalho.png) no-repeat bottom center;}
+#sobre .cabecalho:before{content:""; width: 26px; height: 26px; background: url(../images/scroll.png) no-repeat center center; position: absolute; left: 50%; margin-left: -13px; bottom: 50px;}
+#sobre .cabecalho .limitador{height: 265px;}
+#sobre .cabecalho .icone{width: 70px; float: left;}
+#sobre .cabecalho .titulo{width: 320px; float: left; font-size: 34px; color: #68b4a1; line-height: 40px; font-weight: 900;}
+#sobre .cabecalho .titulo b{color: #ffea00;}
+#sobre .cabecalho .descricao{width: 560px; float: left; font-size: 18px; color: #FFF; font-weight: 300; line-height: 26px;}
+#sobre .cabecalho .btn{float: right; background: #68b4a1;}
+
+#sobre .cabecalho .box{width: 125px; float: left; margin-top: 20px; color: #FFF; position: relative;}
+#sobre .cabecalho .box span{float: left; font-size: 36px; text-align: center; width: 100%; font-weight: bold; margin-top: 60px; margin-bottom: -8px; color: #70b963;}
+#sobre .cabecalho .box img{float: left; max-width: 90%; margin-top: 10px;}
+#sobre .cabecalho .box:before{content:""; position: absolute; width: 479px; height: 7px; left: -530px; top: 100px; background: url(../images/blog_treco1.png) no-repeat center center;}
+#sobre .cabecalho .box:after{content:""; position: absolute; width: 479px; height: 7px; right: -530px; top: 100px; background: url(../images/blog_treco2.png) no-repeat center center;}
+
+
+#sobre .sec_video{width: 100%; float: left; clear: both; padding: 0px 0px; background: #ededed; margin-top: -90px;}
+#sobre .sec_video .lado1{width: 50%; float: left;}
+#sobre .sec_video .lado2{width: 50%; float: left; min-height: 500px;}
+
+
+#sobre .sec_video .lado1 ul.breadcumb{float: left; font-size: 10px; font-weight: 300; clear: both; margin:50px 0px;}
+#sobre .sec_video .lado1 ul.breadcumb li{float: left; margin:0px 2px; color:#84b825;}
+#sobre .sec_video .lado1 ul.breadcumb li a{float: left; color: #0b628f; text-decoration: none;}
+#sobre .sec_video .lado1 ul.breadcumb li a:hover{opacity: 0.7;}
+
+#sobre .sec_video .lado1 h2{float: left; clear: both; font-size: 18px; font-weight: 900; color: #4d4d4d; margin-top: 40px;}
+#sobre .sec_video .lado1 .descricao{width: 100%; float: left; clear: both; padding:20px 50px 20px 0px; font-size: 16px; font-weight: 300; line-height: 24px; color: #565656;}
+#sobre .sec_video .lado1 .descricao img{float: left; clear: both; margin-bottom: 40px;}
+#sobre .sec_video .lado1 .descricao span{width: 100%; float: left; clear: both; font-size: 24px; color: #4d4d4d; font-weight: 900; line-height: 34px;}
+#sobre .sec_video .lado1 .descricao span b{color: #7bac26;}
+
+
+#sobre .sec_video .lado2 .play{position: absolute; left: 50%; margin-left: -50px; top: 160px; padding:60px; border:1px solid #4b7bb4; border-radius: 100%; cursor: pointer; display: none}
+#sobre .sec_video .lado2 .play:hover{border:3px solid #4b7bb4; top:153px; margin-left: -57px; padding: 65px;}
+#sobre .sec_video .lado2 .play:hover img{-webkit-transform: scale(1.2);}
+
+
+
+#sobre #solucoes .baixo .descricao{margin-top: 35px; margin-bottom: 30px; width: 100%; float: left; clear: both; font-size: 14px; line-height: 20px; color: #565656; font-weight: 500;}
+#sobre #solucoes .baixo .valores{width: 100%; float: left; clear: both; margin-top: 30px; margin-bottom: 40px;}
+#sobre #solucoes .baixo .valores .cada{width: 30%; float: left; margin-right: 3%; position: relative;}
+#sobre #solucoes .baixo .valores .cada:before{width: 100%; height: 7px; content: ""; background: url(../images/border-sobre.png) no-repeat left center; bottom: -20px; left: 0px; position: absolute;}
+#sobre #solucoes .baixo .valores .cada .icone{width: 100%; float: left; clear: both; height: 55px;}
+#sobre #solucoes .baixo .valores .cada img{float: left; clear: both;}
+#sobre #solucoes .baixo .valores .cada h3{width: 100%; float: left; clear: both; font-size: 18px; font-weight: 900; color: #575757; padding: 8px 0px;}
+#sobre #solucoes .baixo .valores .cada .texto{width: 100%; height: 100px; float: left; clear: both; font-size: 14px; line-height: 20px; color: #575757; font-weight: 500;}
+#sobre #solucoes img.trecos{top: 110px;}
+
+
+
+
+#contato{width: 100%; float: left; clear: both;}
+#contato .cabecalho{width: 100%; height: 340px; position: relative; float: left; clear: both; background: url(../images/bg_servico_cabecalho.png) no-repeat bottom center; z-index: 10;}
+#contato .cabecalho:before{content:""; width: 26px; height: 26px; background: url(../images/scroll.png) no-repeat center center; position: absolute; left: 50%; margin-left: -13px; bottom: 50px;}
+#contato .cabecalho .limitador{height: 265px;}
+#contato .cabecalho .icone{width: 70px; float: left;}
+#contato .cabecalho .titulo{width: 320px; float: left; font-size: 34px; color: #68b4a1; line-height: 40px; font-weight: 900;}
+#contato .cabecalho .descricao{width: 560px; float: left; font-size: 18px; color: #FFF; font-weight: 300; line-height: 26px;}
+#contato .cabecalho .btn{float: right; background: #68b4a1;}
+
+
+
+#contato .baixo{width: 100%; float: left; clear: both; margin-top: -90px; background: #ededed;}
+#contato .baixo .lado1{width: 50%; float: left; padding-bottom: 40px;z-index:11;position: relative;}
+#contato .baixo .lado1 .lado11{width: 50%; float: left; color: #21a4af;}
+#contato .baixo .lado1 .lado11 h3{width: 100%; float: left; clear: both; font-size: 20px; font-weight: 900; margin-bottom: 20px; margin-top: 50px;}
+#contato .baixo .lado1 .lado11 i{float: left; clear: both; font-size: 18px; margin-right: 5px;}
+#contato .baixo .lado1 .lado11 span{float: left; font-size: 16px; font-weight: 500; margin-bottom: 5px;}
+#contato .baixo .lado1 .lado11 .btn{margin-top: 20px;}
+
+#contato .baixo .lado1 .lado22{width: 50%; float: left; color: #484848;}
+#contato .baixo .lado1 .lado22 h3{width: 100%; float: left; clear: both; font-size: 20px; font-weight: 900; margin-bottom: 20px; margin-top: 50px;}
+#contato .baixo .lado1 .lado22 i{float: left; clear: both; font-size: 18px; margin-right: 5px;}
+#contato .baixo .lado1 .lado22 span{float: left; font-size: 16px; font-weight: 500; line-height: 24px;}
+#contato .baixo .lado1 .lado22 .btn{margin-top: 20px; background: #484848; color: #FFF;}
+
+
+#contato .baixo .lado2{width: 50%; float: left; height: 450px;}
+
+
+#contato .formulario{width: 100%; float: left; clear: both; padding: 70px 0px 150px 0px;}
+#contato .formulario .lado1{width: 55%; float: left; margin-top: 20px}
+#contato .formulario .lado1 span{width: 100%; float: left; clear: both; font-size: 14px; color: #565656; font-weight: 500;}
+#contato .formulario .lado1 form{width: 100%; float: left; clear: both; margin-top: 20px;}
+#contato .formulario .lado1 form .group{width: 100%; float: left; margin:5px 0px;}
+#contato .formulario .lado1 form .group label{width: 100%; float: left; clear: both; font-size: 12px; color: #565656; padding-left: 8px; padding-bottom: 3px;}
+#contato .formulario .lado1 form .group input,
+#contato .formulario .lado1 form .group textarea{width: 100%; float: left; clear: both; background: #ededed; border-radius: 12px; font-size: 14px; color: #333; padding: 10px 15px; border: 2px solid transparent; outline: none; font-family: 'Antenna'; font-weight: 300;}
+#contato .formulario .lado1 form .group input:focus,
+#contato .formulario .lado1 form .group textarea:focus{border:2px solid #7cad5c;}
+
+#portalcliente .formulario .lado1 form .group textarea{width: 100%; float: left; clear: both; background: #ededed; border-radius: 12px; font-size: 14px; color: #333; padding: 10px 15px; border: 2px solid transparent; outline: none; font-family: 'Antenna'; font-weight: 300;}
+
+#contato .formulario .lado1 form .group:nth-child(1){width: 50%; padding-right: 10px;}
+#contato .formulario .lado1 form .group:nth-child(2){width: 50%; padding-left: 10px;}
+#contato .formulario .lado1 form .group:nth-child(3){width: 50%; padding-right: 10px;}
+#contato .formulario .lado1 form .group:nth-child(4){width: 50%; padding-left: 10px;}
+
+#contato .formulario .lado1 form button{float: right; margin-top: 5px;}
+ 
+
+#contato .formulario .lado2{width: 45%; float: left; padding-left: 40px;}
+#contato .formulario .lado2 .box{width: 100%; float: left; background: url(../images/bg_contato2.jpg) no-repeat center center; border-radius: 12px; padding: 67px 40px; margin-top: 60px;}
+#contato .formulario .lado2 .box h2{width: 100%; float: left; clear: both; font-size: 20px; font-weight: 900; color: #FFF;}
+#contato .formulario .lado2 .box .texto{width: 100%; float: left; clear: both; font-size: 14px; line-height: 22px; color: #FFF; padding:20px 0px; font-weight: 400;}
+#contato .formulario .lado2 .box .btn{background: #FFF; color: #298b93;}
+
+
+#contato .representante{width: 100%; float: left; clear: both; background: #ededed; padding: 120px 0px 100px 0px; margin-bottom: -80px; position: relative; z-index: 5; display: none}
+#contato .representante .lado1{width: 40%; float: left; position: relative;}
+#contato .representante .lado1:before{content:""; position: absolute; width: 7px; height: 310px; background: url(../images/border-contato.png) no-repeat top center; top: -20px; right: 40px;}
+#contato .representante .lado1 h1{width: 100%; float: left; clear: both; font-size: 34px; font-weight: 900; color: #7cad5c; margin-top: 20px;}
+#contato .representante .lado1 h1 b{color: #025d8b;}
+#contato .representante .lado1 select{font-size: 16px; color: #FFF; background: #5c5c5c; font-weight: 900; padding: 15px 20px; border-radius: 12px; border: none; outline: none; margin-top: 40px;}
+
+#contato .representante .lado2{width: 60%; float: left; padding-left: 40px;}
+#contato .representante .lado2 .cada{width: 50%; float: left; margin-bottom: 30px; color: #565656;}
+#contato .representante .lado2 .cada .estado{font-size: 14px; color: #FFF; font-weight: 400; padding:5px 12px; border-radius: 6px; background: #565656; float: left;}
+#contato .representante .lado2 .cada .texto{width: 100%; float: left; clear: both; padding-top: 20px; font-size: 14px; line-height: 18px; font-weight: 500; color: #565656;}
+#contato .representante .lado2 .cada .texto b{font-weight: 600;}
+
+
+
+
+
+
+.solicitarContato{width: 100%; float: left; clear: both; min-height: 545px; position: relative; margin-bottom: -80px; z-index: 2;}
+.solicitarContato .lado1{width: 40%; float: left;}
+.solicitarContato .lado1 h3{float: left; clear: both; font-size: 34px; color: #ffea00; font-weight: 900; margin-top: 100px;}
+.solicitarContato .lado1 h3 b{color: #FFF;}
+.solicitarContato .lado1 .texto{width: 100%; float: left; clear: both; padding-right: 90px; padding-top: 30px; font-size: 18px; line-height: 30px; font-weight: 300; color: #FFF;}
+.solicitarContato .lado1 .texto b{font-weight: 900; color: #ffea00;}
+
+.solicitarContato .lado2{width: 30%; float: left; padding:80px 0px; padding-right: 10px;}
+.solicitarContato .form-group{width: 100%; float: left; clear: both; margin:6px 0px;}
+.solicitarContato .form-group label{width: 100%; float: left; clear: both; font-size: 12px; font-weight: 300; color: #FFF; margin-left: 10px; margin-bottom: 5px;}
+.solicitarContato .form-group input,
+.solicitarContato .form-group textarea{width: 100%; float: left; clear: both; font-size: 12px; font-weight: 300; color: #ffea00; padding: 15px; border:none; border-radius: 15px; outline: none; border:2px solid transparent; font-family: 'Antenna';}
+.solicitarContato .form-group input:focus,
+.solicitarContato .form-group textarea:focus{border:2px solid #ffea00;}
+.solicitarContato .form-title{width: 100%; float: left; clear: both; font-size: 12px; color: #FFF; font-weight: 300; margin-top: 17px;}
+.solicitarContato label.checkbox{float: left; margin-left: 0px; clear: initial; width: 25%; padding:15px 0px;}
+.solicitarContato label.checkbox input{float: left; width: auto; margin-left: 0px; width: 15px; height: 15px;}
+.solicitarContato label.checkbox:hover input{}
+.solicitarContato label.checkbox span{float: left; padding:2px 3px;}
+
+.solicitarContato .lado3{width: 30%; float: left; padding:80px 0px; padding-left: 10px;}
+.solicitarContato .lado3 .btn{width: 100%; background: #ffea00;}
+
+
+
+
+
+
+#servicos{width: 100%; float: left; clear: both; padding:50px 0px; position: relative;}
+#servicos .limitador2{width: 80%; max-width: 1000px; float: left;}
+#servicos .topo{width: 100%; float: left; clear: both; margin-bottom: 25px; padding-bottom: 30px; position: relative;}
+#servicos .topo:before{content:""; width: 973px; height: 11px; position: absolute; bottom: 0px; left: 0px; background: url(../images/hr_horizontal.png) no-repeat center center;}
+#servicos .topo .lado1{width: 40%; float: left; font-size: 34px; color: #025d8b; font-weight: 900;}
+#servicos .topo .lado1 b{color: #7cad5c;}
+#servicos .topo .lado2{width: 60%; float: left; padding: 50px; position: relative;}
+#servicos .topo .lado2:before{content:""; width: 13px; height: 196px; background: url(../images/hr_vertical.png) no-repeat center center; left: 0px; top: 0px; position: absolute;}
+#servicos .topo .lado2 span{width: 100%; float: left; clear: both; color: #565656; font-weight: 300; line-height: 30px;}
+#servicos .topo .lado2 .btn{background: #025d8b; clear: both; margin-top: 10px;}
+
+#servicos .baixo{width: 100%; float: left; clear: both;}
+#servicos .baixo h1{width: 100%; float: left; clear: both; font-size: 34px; color: #025d8b;}
+#servicos .baixo h1 b{color: #43aaa4;}
+#servicos .baixo .todos{width: 100%; float: left; clear: both; margin-top: 50px; margin-bottom: 120px}
+
+#servicos .baixo .todos .cada .ladoImagem{width: 130px; float: left;}
+#servicos .baixo .todos .cada .ladoTextos{width: calc(100% - 130px); padding-left: 20px; float: left;}
+
+#servicos .baixo .todos .cada{width: 50%; float: left; padding: 35px 20px;min-height: 200px;}
+#servicos .baixo .todos .cada .imagem{width: 120px; height: 120px; position: relative; background: #ededed; border-radius: 100%; position: relative;}
+#servicos .baixo .todos .cada .titulo{width: 100%; float: left; clear: both; font-size: 16px; line-height: 22px; font-weight: 900; color: #0b628f; padding-top: 10px;}
+#servicos .baixo .todos .cada .titulo b{color: #43aaa4;}
+#servicos .baixo .todos .cada .texto{width: 100%; float: left; font-size: 14px; font-weight: 100; line-height: 20px; padding-top: 10px;}
+
+#servicos .baixo .todos .cada:hover .imagem{background: #84b825;}
+#servicos .baixo .todos .cada:hover .imagem img{-webkit-filter: brightness(0) invert(1);}
+#servicos .baixo .todos .cada:hover .titulo{color: #000;}
+#servicos .baixo .todos .cada:hover .titulo b{color: #000;}
+
+
+#noticia{width: 100%; float: left; clear: both; padding: 50px 0px 150px 0px;}
+#noticia .topo{width: 100%; float: left; clear: both;}
+#noticia .topo .lado1{width: 35%; float: left;}
+#noticia .topo .lado1 h1{width: 100%; float: left; font-size: 40px; font-weight: bold; color: #025d8c; line-height: 50px; margin-top:40px;}
+#noticia .topo .lado1 .data{float: left; clear: both; font-size: 16px; color: #666; font-weight: 500;}
+#noticia .topo .lado2{width: 65%; float: left; padding-left: 30px;}
+#noticia .topo .lado2 .imagem{width: 100%; height: 320px; float: left; border-radius: 12px;}
+#noticia .textoNoticia{width: 100%; float: left; clear: both; padding: 30px 0px; color: #666; font-size: 16px; line-height: 24px; font-weight: 300; font-family: 'Antenna';}
+
+#noticia .todasFotos{width: 100%; float: left; clear: both;}
+#noticia .todasFotos h2{float: left; clear: both; font-size: 18px; font-weight: bold; color: #666; padding: 10px 0px;}
+#noticia .todasFotos .todas{width: 100%; float: left; clear: both;}
+#noticia .todasFotos .todas .cada{width: 23%; float: left; margin:1% 1%; border-radius: 12px; height: 170px;}
+#noticia .todasFotos .todas .cada:hover{opacity: 0.7 !important;}
+
+
+#produtos{width: 100%; float: left; clear: both; margin-top: -80px;}
+#produtos .sidebar{width: 275px; float: left; background: #d9d9d9; border-radius: 12px; margin-top: 15px;}
+#produtos .sidebar h2{width: 100%; float: left; clear: both; font-size: 16px; font-weight: bold; color: #FFF; background: #0c7aa3; border-radius: 12px; text-align: center; padding:20px;}
+#produtos .sidebar ul{width: 100%; float: left; clear: both;}
+#produtos .sidebar ul li{width: 100%; float: left; clear: both; font-weight: bold;}
+#produtos .sidebar ul li a{width: 100%; float: left; clear: both; font-size: 15px; color: #3e3e3e; padding: 10px; border-bottom: 1px dotted #666; cursor: pointer;}
+#produtos .sidebar ul li ul{display: none;}
+#produtos .sidebar ul li ul li a{font-weight: 100; padding-left: 15px;}
+
+#produtos .sidebar ul li.ativo a{color: #0c7aa3;}
+#produtos .sidebar ul li.ativo ul li a{color: #3e3e3e;}
+#produtos .sidebar ul li.ativo ul{display: block;}
+
+#produtos .sidebar ul li a:hover{opacity: 0.7;}
+
+
+#produtos .produtos_conteudo{width: calc(100% - 275px); float: left; padding-left: 30px; padding-bottom: 100px}
+#produtos .produtos_conteudo .wrap_produtos .cada{width: 30%; margin:20px 1.5%;}
+#produtos .produtos_conteudo h3{float: left; font-size: 16px; font-weight: bold; color: #1c6993; padding: 35px 0px;}
+#produtos .produtos_conteudo select{float: right; background: #5c5c5c; color: #FFF; padding: 0 15px; border-radius: 12px; border: none; outline: none; margin-top: 30px; height: 35px; width: 200px}
+
+
+
+#produto{width: 100%; float: left; clear: both;}
+#produto .lado1{width: 370px; float: left;}
+#produto .lado1 .imagem_principal{width: 97%; margin-left: 1.5%; height: 350px; float: left; clear: both; background: #FFF; border-radius: 12px; position: relative;}
+#produto .lado1 .imagem_principal img{float: left; max-width: 90%; max-height: 90%;}
+
+#produto .lado1 .thumbs{width: 100%; float: left; clear: both; margin:20px 0px;}
+#produto .lado1 .thumbs .cada{width: 30%; height: 110px; float: left; background: #FFF; opacity: 0.7; border:2px solid transparent; border-radius: 12px; margin:0px 1.5%; position: relative; cursor: pointer;}
+#produto .lado1 .thumbs .cada img{float: left; max-width: 90%; max-height: 90%;}
+
+#produto .lado1 .thumbs .cada.ativo{cursor: default; border: 2px solid #3290b3; opacity: 1 !important;}
+#produto .lado1 .thumbs .cada:hover{opacity: 1 !important;}
+
+#produto .lado1 .btn{width: 97%; margin-left: 1.5%; padding: 20px; text-align: center; margin:30px 0px;}
+
+#produto .lado1 .boxduvidas{width: 97%; margin-left: 1.5%; float: left; background: #FFF; padding: 30px; border-radius: 12px; margin-top:15px; font-weight: 100; line-height: 30px;}
+
+
+#produto .lado2{width: calc(100% - 370px); float: left; padding-left: 25px; margin-bottom: 40px;}
+#produto .lado2 .titulo{float: left; font-size: 16px; line-height: 24px; color: #0b628f; font-weight: 100;}
+#produto .lado2 .titulo b{font-weight: bold;}
+#produto .lado2 .label{float: right; font-size: 16px; font-weight: 100; color: #6e6e6e; padding: 10px 15px; border: 1px solid #6e6e6e; border-radius: 12px; margin-left: 10px;}
+#produto .lado2 .descricao{width: 100%; float: left; clear: both; font-size: 16px; font-weight: 100; color: #6e6e6e; line-height: 22px; padding: 25px 0px;}
+#produto .lado2 .descricao b{font-weight: bold;}
+#produto .lado2 .btn{float: left; clear: both; margin-bottom: 10px; font-weight: 100; color: #FFF; background: #48890b; padding: 15px 25px; border-radius: 12px; cursor: pointer;}
+#produto .lado2 .btn:hover{opacity: 0.7 !important;}
+
+#produto .lado2 .configuracoes{width: 100%; float: left; clear: both; margin-top: 10px 0px;}
+#produto .lado2 .configuracoes h3{float: left; clear: both; font-size: 18px; font-weight: bold; color: #565656; padding: 10px 0px; margin-top:60px}
+#produto .lado2 .configuracoes .tabs{float: left; clear: both;}
+#produto .lado2 .configuracoes .tabs .cada{float: left; font-size: 14px; font-weight: 500; color: #FFF; background: #3290b3; padding: 15px 25px; border-radius: 12px 12px 0px 0px; margin-right: 10px; cursor: pointer;}
+#produto .lado2 .configuracoes .tabs .cada.ativo{background: #226c87; cursor: default;}
+#produto .lado2 .configuracoes .tabs .cada:hover{background: #226c87;}
+
+#produto .lado2 .configuracoes .textototal{width: 100%; float: left; clear: both; background: #FFF; font-size: 14px; line-height: 24px; font-size: 100; color: #565656; padding: 40px 30px; border-radius: 0px 12px 12px 12px;}
+
+
+
+
+
+.overlay-modal{display:none; width: 100%; height: 100vh; float: left; clear: both; background: rgba(0,0,0,0.7); position: fixed; left: 0px; top: 0px; z-index: 50;}
+.modal{display:none; width: 70%; height: 70vh; background: #FFF; position: fixed; left: 15%; top: 15%; z-index: 55;}
+.modal .fechar{font-size: 30px; color:#FFF; cursor: pointer; right: 0px; top: -40px; position: absolute;}
+.modal .fechar:hover{opacity: 0.7;}
+.modal .conteudo{width: 100%; height: 100%; float: left; clear: both; position: relative;}
+.modal .conteudo iframe{position: relative; float: left; clear: both; width: 100%; height: 100%;}
+
+
+
+
+
+/** Tablet/Notebook **/
+@media only screen and (max-width: 1200px) {
+	.show-tablet{display:block!important}.hide-tablet{display:none!important}
+
+	.hamburguer{display:block;}
+
+	#solucoes .limitador2{width: 100%;}
+
+	html, body{width: 100%; float: left; clear: both; overflow-x: hidden;}
+
+	header{padding: 0px 30px;}
+	header ul{display: none;}
+	header .btn{display: none;}
+	.menu-responsive .btn{display: block !important; opacity: 1 !important;}
+
+	header.interna{padding: 20px 30px;}
+
+	#banners .banners .cada{height: 420px;}
+	#banners .banners .cada .limitador{height: 420px;}
+	#banners .banners .cada .box{width: 90%; float: left; clear: both; left: 5%; margin-top: 30px;}
+	#banners .banners .cada .box h1{font-size: 20px; line-height: 20px;}
+	#banners .banners .cada .box h2{font-size: 16px; line-height: 16px;}
+	#banners .banners .cada .box h3{font-size: 13px; line-height: 18px; padding: 8px 0px;}
+	#banners .banners .cada .box .btn{font-size: 14px;}
+	#banners .scroll{bottom: 20px;}
+
+	/*#banners .owl-theme .owl-controls{position:absolute; right: initial; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%);}*/
+	#banners .owl-theme .owl-controls{top: 320px; right: 20px;}
+	#banners .owl-theme .owl-controls .owl-page{clear: initial;}
+	#banners .owl-theme .owl-controls .owl-page span{width: 15px; height: 15px;}
+
+
+	#solucoes{padding: 20px;}
+	#solucoes .topo{width: 100%;}
+	#solucoes .topo .lado1{width: 100%; font-size: 26px;}
+
+	#solucoes .topo .lado2{width: 100%; padding:10px 0px;}
+	#solucoes .topo .lado2:before{display: none;}
+
+	#solucoes img.trecos{display: none;}
+
+
+	#solucoes .baixo h1{font-size: 26px;}
+	#solucoes .baixo .todos .cada{width: 100%; margin:30px 0px; height: auto;}
+
+
+	#solucoes_veja h4{font-size: 26px; margin-top: 50px;}
+
+	#produtos_home{padding: 20px;}
+	#produtos_home .topo .lado1{width: 100%; padding: 0px; font-size: 26px; padding-top: 120px;}	
+	#produtos_home .topo .lado2{width: 100%; padding: 10px 0px;}
+	#produtos_home .topo .lado2:before{display: none;}
+
+	#produtos_home .baixo h1{font-size: 26px;}
+	.wrap_produtos .cada{width: 100%; margin-bottom: 30px; float: left; clear: both;}
+
+	#novidades{padding: 20px; padding-top: 110px;}
+	#novidades h1:before,
+	#novidades h1:after{display: none;}
+	#novidades h1{font-size: 26px;}
+	#novidades .todos .cada{width: 100%; float: left; clear: both; margin: 10px 0px;}
+
+	footer{padding: 120px 20px 20px 20px;}
+	footer .topo img{position: relative; left: 50%; margin-left: -85.5px;}
+	footer .topo form{width: 100%; float: left; clear: both;}
+	footer .topo form .group{width: 100%; float: left; clear: both; margin-bottom: 10px;}
+	footer .topo form input{width: 100%; float: left;}
+	footer .topo form .btn{margin-top: 5px; width: 100%; margin-left: 0px;}
+
+	footer .topo h2{font-size: 24px; padding: 10px 0px; margin:0px; float: left; clear: both;}
+
+	footer .baixo .cada.cadaPaginas{width: 100%; margin-bottom: 20px;}
+	footer .baixo .cada.cadaPostagens{width: 100%; margin-bottom: 20px;}
+	footer .baixo .cada.cadaFale{width: 100%; margin-bottom: 20px;}
+	footer .baixo .cada.cadaEndereco{width: 100%; margin-bottom: 20px;}
+
+	footer .copy{margin-top: 20px;}
+
+
+
+	#sobre .cabecalho .titulo{width: 100% !important; float: left; clear: both; text-align: center; font-size: 26px; padding: 20px 0px 12px 0px; top: initial; transform: initial;}
+	#sobre .cabecalho .descricao{width: 100%; float: left; clear: both; text-align: center; font-size: 18px; padding: 0px 20px 20px 20px; top:initial; transform:initial;}
+	#sobre .cabecalho .btn{float: left; clear: both; top: initial; transform: initial; left: 50%; margin-left: -72px;}
+
+
+
+	.limitador_meio_right{width: 100%; float: left; clear: both;}
+	.limitador_meio_left{width: 100%; float: left; clear: both;}
+
+	#sobre .sec_video{padding: 20px;}
+	#sobre .sec_video .lado1{width: 100%;}
+	#sobre .sec_video .lado1 ul.breadcumb{margin-top: 90px;}
+	#sobre .sec_video .lado1 .descricao{padding-top: 0px;}
+
+	#sobre .sec_video .lado2{width: 100%;}
+	#sobre .sec_video .lado2{min-height: 260px;}
+	#sobre .sec_video .lado2 .play{top: 40px; margin-left: -90px;}
+	#sobre .sec_video .lado2 .play:hover{top: 40px; margin-left: -90px;}
+
+	#sobre #solucoes .baixo .valores .cada{width: 100%; float: left; clear: both; padding-top: 20px;}
+
+	#produtos{padding: 20px;}
+	#produtos ul.breadcumb{margin-top: 90px;}
+	#produtos .sidebar{width: 100%; float: left; clear: both;}
+	#produtos .produtos_conteudo{width: 100%; float: left; clear: both; padding-left: 0px;}
+	#produtos .produtos_conteudo .wrap_produtos .cada{width: 100%;}
+	#produtos .produtos_conteudo select{width: 100%; float: left; clear: both; margin-top: 0px; height: 30px}
+
+
+	.solicitarContato{padding: 20px;}
+	.solicitarContato .lado1{width: 100%;}
+	.solicitarContato .lado2{width: 100%; padding: 20px 0px 0px 0px;}
+	.solicitarContato .lado3{width: 100%; padding: 20px 0px 0px 0px}
+
+	.solicitarContato .lado1 h3{margin-top: 0px;}
+	.solicitarContato .lado1 .texto{padding: 0px; padding-top: 15px;}
+
+
+	#sobre .cabecalho:before{bottom: 20px;}
+
+	#produto{padding: 20px;}
+	#produto ul.breadcumb{margin-top: 90px;}
+
+	#produto .lado1{width: 100%;}
+	#produto .lado2{width: 100%; margin-top: 0px; padding: 0px;}
+	#produto .lado2 .label{float: left; margin-right: 10px; font-size: 14px; clear: initial; margin-left: 0px; padding: 6px 10px; margin-top: 10px;}
+	#produto .lado2 .configuracoes .tabs .cada{font-size: 12px; padding: 10px 8px;}
+	#produto .lado2 .configuracoes .textototal{font-size: 14px; line-height: 20px;}
+
+	header img.logo {max-width:80px}
+
+	#produtos .produtos_conteudo .wrap_produtos .cada,
+	#produtos .wrap_produtos .cada {
+		position: relative;
+		border-top: #dbdbdb solid 2px;
+		padding-top: 30px;
+		margin-top: 0;
+	}
+	#produtos .produtos_conteudo .wrap_produtos a:first-child .cada,
+	.wrap_produtos a:first-child .cada {
+		border-top: none;
+	}
+	.wrap_produtos .cada .imagem {
+		position: absolute;
+		background: #fff;
+		width: 130px;
+		height: 130px;
+		top: 25px;
+		left: 0;
+	}
+	.wrap_produtos .cada .descricao {
+		display: none;
+	}
+	.wrap_produtos .cada .subtitulo,
+	.wrap_produtos .cada .valor {
+		margin-left: 140px;
+		width: auto;
+		padding: 10px;
+	}
+
+
+	#servicos .sec_vejatbm{padding: 20px;}
+	#servicos .sec_vejatbm h2{font-size: 26px;}
+	#servicos .sec_vejatbm .todos_slides .arrow-left{left: 0px; opacity: 1 !important;}
+	#servicos .sec_vejatbm .todos_slides .arrow-right{right: 0px; opacity: 1 !important;}
+
+	#sobre .sec_video .lado1 .descricao img{max-width: 90%;}
+
+	#servicos{padding-top: 0px;}
+
+	#servicos .baixo .todos .cada{width: 100%; float: left; clear: both;}
+	#servicos .baixo .todos .cada .ladoImagem{width: 90px;}
+	#servicos .baixo .todos .cada .imagem{width: 90px; height: 90px;}
+	#servicos .baixo .todos .cada .ladoTextos{width: calc(100% - 90px);}
+
+
+	/*#servicos .cabecalho:before{display: none;}*/
+	#servicos .cabecalho .icone{display: none;}
+	#servicos .cabecalho .titulo{width: 100%; float: left; clear: both; text-align: center; font-size: 26px; padding: 20px 10px 12px 10px; top: initial; transform: initial;}
+	#servicos .cabecalho .descricao{width: 100%; float: left; clear: both; text-align: center; font-size: 14px; padding: 0px 20px 20px 20px; top:initial; transform:initial;}
+	#servicos .cabecalho .btn{float: left; clear: both; top: initial; transform: initial; left: 50%; margin-left: -91px;}
+
+	.limitador_meio_right{width: 100%;}
+	.limitador_meio_left{width: 100%;}
+
+	#servicos ul.breadcumb{margin-top: 90px;}
+
+	#servicos .sec_video{padding: 20px;}
+	#servicos .sec_video .lado1{width: 100%;}
+	#servicos .sec_video .lado1 ul.breadcumb{margin-top: 90px;}
+	#servicos .sec_video .lado1 .descricao{padding-top: 0px;}
+
+	#servicos .sec_video .lado2{width: 100%;}
+	#servicos .sec_video .lado2{min-height: 260px;}
+	#servicos .sec_video .lado2 .play{top: 40px; margin-left: -90px;}
+	#servicos .sec_video .lado2 .play:hover{top: 40px; margin-left: -90px;}
+
+	#servicos .sec_textos{padding: 0px 20px;}
+	#servicos .sec_textos .cada{width: 100%; padding-right: 0px;}
+	#servicos .topo{margin-bottom: 10px; padding-bottom: 10px;}
+
+
+
+
+	#servicos .orcamento{padding: 20px;}
+	#servicos .orcamento .lado1{width: 100%;}
+	#servicos .orcamento .lado2{width: 100%; padding: 20px 0px 0px 0px;}
+	#servicos .orcamento .lado3{width: 100%; padding: 20px 0px 0px 0px}
+
+	#servicos .orcamento .lado1 h3{margin-top: 0px;}
+	#servicos .orcamento .lado1 .texto{padding: 0px; padding-top: 15px;}
+
+	#novidades .todos .cada{width: 100% !important;}
+
+	#noticia{padding: 50px 20px 20px 20px;}
+	#noticia ul.breadcumb{margin-top: 90px;}
+
+	#noticia .topo .lado1{width: 100%;}
+	#noticia .topo .lado1 h1{font-size: 20px; line-height: 30px; padding-bottom: 20px; margin-top: 20px;}
+
+	#noticia .topo .lado2{width: 100%; padding-left: 0px;}
+	#noticia .todasFotos .todas .cada{width: 48%;}
+
+
+
+	#contato .cabecalho:before{display: none;}
+	#contato .cabecalho .icone{display: none;}
+	#contato .cabecalho .titulo{width: 100%; float: left; clear: both; text-align: center; font-size: 26px; padding: 20px 10px 12px 10px; top: initial; transform: initial;}
+	#contato .cabecalho .descricao{width: 100%; float: left; clear: both; text-align: center; font-size: 14px; padding: 0px 20px 20px 20px; top:initial; transform:initial;}
+	#contato .cabecalho .btn{float: left; clear: both; top: initial; transform: initial; left: 50%; margin-left: -75.5px;}
+
+
+	#contato .baixo{padding: 20px;}
+	#contato ul.breadcumb{margin-top: 90px;}
+	#contato .baixo .lado1{width: 100%;}
+	#contato .baixo .lado1 .lado11{width: 100%;}
+	#contato .baixo .lado1 .lado11 .btn{float: left; clear: both;}
+	#contato .baixo .lado1 .lado22{width: 100%;}
+	#contato .baixo .lado2{width: 100%;}
+
+	#contato .formulario{padding:20px 20px;}
+	#contato .formulario .lado1{width: 100%;}
+	#contato .formulario .lado2{width: 100%; padding-left: 0px;}
+
+
+	#contato .representante{padding:50px 20px;}
+	#contato .representante .lado1:before{display: none;}
+	#contato .representante .lado1{width: 100%;}
+	#contato .representante .lado2{width: 100%; padding-left: 0px; margin-top: 20px;}
+	#contato .representante .lado2 .cada{width: 100%;}
+
+
+
+
+	.modal-orcamento{width: 95%;}
+	.modal-orcamento .orcamento{padding: 0px 15px;}
+	.modal-orcamento .orcamento .lado1 h3{font-size: 20px; padding-bottom: 15px; margin-top: 15px;}
+	.modal-orcamento .orcamento .lado2{width: 100%; padding: 0px;}
+	.modal-orcamento .orcamento .lado3{width: 100%; padding: 0px; padding-bottom: 15px;}
+
+	.owl-theme .owl-dots, .owl-theme .owl-nav{position: absolute; right: 20px; bottom: 20px;}
+
+
+}
+/** Celular Maior **/
+@media only screen and (max-width: 768px) {
+	.show-phone{display:block!important}.hide-phone{display:none!important}
+
+	.modal-orcamento {
+		width: 100%;
+		padding: 0;
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		overflow: auto;
+		transform: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		z-index: 999999999999;
+	}
+	.modal-orcamento .orcamento {
+		padding: 10px 25px;
+	}
+	.modal-orcamento .fechar {
+		right: 25px;
+		top: 20px;
+		z-index: 2;
+	}
+
+	.solicitarContato label.checkbox,
+	#servicos .orcamento label.checkbox {
+		width: 32%;
+	}
+	
+}
+@media only screen and (max-width: 470px) {
+	.show-phone{display:block!important}.hide-phone{display:none!important}
+}
+@media only screen and (max-width: 350px) {
+	.show-phone{display:block!important}.hide-phone{display:none!important}
+}
+
+
+
+
+/* KEYFRAMES */
+@-webkit-keyframes scroll {
+  0%   { bottom: 28px; }
+  50%  { bottom: 20px; }
+  100% { bottom: 28px; }
+}
+
+/* WHATSAPP */
+.pulse {
+	display: block;
+	width: 55px;
+	position: absolute;
+	height: 55px;
+	border-radius: 90%;
+
+	cursor: pointer;
+	background-image:url(../images/whatsapp.png)!important;
+	background-position: center;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 0 rgba(54, 160, 79, 0.8);
+	animation: pulse 1s infinite;
+  }
+  .pulse:hover {
+	animation: pulse 2s infinite;
+  }
+  
+  @-webkit-keyframes pulse {
+	0% {
+	  -webkit-box-shadow: 0 0 0 0 rgba(54, 160, 79, 0.8);
+	}
+	70% {
+		-webkit-box-shadow: 0 0 0 10px rgba(54, 160, 79, 0.6);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(54, 160, 79, 0.6);
+	}
+  }
+  @keyframes pulse {
+	0% {
+	  -moz-box-shadow: 0 0 0 0 rgba(54, 160, 79, 0.6);
+	  box-shadow: 0 0 0 0 rgba(54, 160, 79, 0.8);
+	}
+	80% {
+		-moz-box-shadow: 0 0 0 10px rgba(54, 160, 79, 0.6);
+		box-shadow: 0 0 0 10px rgba(54, 160, 79, 0.8);
+	}
+	100% {
+		-moz-box-shadow: 0 0 0 0 rgba(54, 160, 79, 0.8);
+		box-shadow: 0 0 0 0 rgba(54, 160, 79, 0);
+	}
+  }
+
+
+  #md-chat-widget, .md-chat-widget {
+	  box-shadow: none;
+  }
+
+  #md-chat-widget.minimized, .md-chat-widget.minimized {
+	box-shadow: none;
+}
+  
+
+
+  

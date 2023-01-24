@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Antenna';
+    src: url('fonts/Antenna-Black.woff2') format('woff2'),
+        url('fonts/Antenna-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Antenna';
+    src: url('fonts/Antenna-Regular.woff2') format('woff2'),
+        url('fonts/Antenna-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Antenna';
+    src: url('fonts/Antenna-Light.woff2') format('woff2'),
+        url('fonts/Antenna-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+

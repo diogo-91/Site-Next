@@ -1,0 +1,436 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Muli:wght@500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+
+body,
+html {
+	font-size: 16px;
+	font-family: Muli, sans-serif;
+	background: #f8f8f8;
+    color: #7b7f82;
+	font-weight: 500
+}
+
+h1,
+h2,
+h3 {
+	font-family: Montserrat, sans-serif;
+	color: #252c34
+}
+
+.grid-container {
+	max-width: 69rem
+}
+
+
+header {
+    background: url('/vantagens/img/banner-byit.jpg') no-repeat center top #0d425b;
+    background-size: cover;
+    padding-top: 30px;
+}
+header .phone {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+header .phone a {
+	font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    color: #66c2be;
+    text-decoration: underline;
+    transition: all 0.2s ease-out;
+}
+header .phone a:hover {
+    color: #84b825;
+}
+header .content {
+    width: 100%;
+    max-width: 620px;
+    padding: 135px 0 180px;
+}
+header .content strong {
+    font-family: 'Poppins', sans-serif;
+    color: #84b825;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
+}
+header .content h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 900;
+    color: #fff;
+}
+header .content h1 b {
+    color: #84b825;
+}
+header .content span {
+	font-family: Montserrat, sans-serif;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.78;
+    color: #ffffff;
+    display: block;
+}
+.button,
+header .content .button {
+	font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: #66c2be;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 1.3125rem;
+    padding: 25px 50px;
+    display: inline-block;
+    margin-top: 40px;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    text-align: center;
+}
+.button:hover,
+header .content .button:hover {
+    background: #84b825;
+}
+
+
+section.info {
+    padding: 6.25rem 0;
+}
+section.info h2 {
+    color: #025d8b;
+    font-weight: 900;
+    font-size: 1.6875rem;
+    line-height: 1.48;
+    margin: 0 0 15px;
+}
+section.info strong {
+	font-family: Montserrat, sans-serif;
+    color: #025d8b;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.78;
+}
+section.info p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.56;
+    margin: 0;
+    padding-left: 40px;
+    border-left: solid 3px #84b825;;
+}
+
+section.ben {
+    background: #0d425b;
+}
+section.ben .color {
+    position: relative;
+    top: -150px;
+    background: #025d8b;
+    color: #fff;
+    padding: 10% 15%;
+}
+section.ben .color h2 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #fff;
+}
+section.ben .color ul {
+    list-style: none;
+    position: relative;
+    padding: 10px 0 0 0;
+    margin:0
+}
+section.ben .color ul li {
+    line-height: 2;
+}
+section.ben .color ul li i {
+    font-size: 10px;
+    color: #014d73;
+    width: 30px;
+}
+
+
+section.marcas {
+    padding: 4rem 0;
+}
+section.marcas .small-4 {
+    min-height: 100px;
+}
+
+section.quality {
+    background: #0d425b;
+    padding: 0 0 7.75rem;
+}
+
+section.quality h2 {
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+section.quality ul {
+    list-style: none;
+    position: relative;
+    padding: 10px 0 0 0;
+    margin:0
+}
+
+section.quality ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background: #5fff71;
+    background-image:linear-gradient(#009be1, #5fff71)
+}
+
+section.quality ul li {
+	font-family: Montserrat, sans-serif;
+    color: #b6ccd7;
+    line-height: 1.5;
+    padding: 0 0 1.5rem 6rem;
+    position:relative
+}
+
+section.quality ul li:last-child {
+    padding-bottom:0
+}
+
+section.quality ul li i {
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 2.375rem;
+    top:0
+}
+
+section.contact {
+    padding: 6.25rem 0;
+}
+section.contact > div {
+    position: relative;
+}
+section.contact > div:before {
+    position: absolute;
+    right: 0;
+    bottom: -6.25rem;
+    content: '';
+    background: url('/vantagens/img/contato.png') no-repeat;
+    width: 700px;
+    height: 685px;
+}
+section.contact h2 {
+    font-size: 3rem;
+    color: #383e46;
+    font-weight: 900;
+    margin: 0;
+}
+section.contact p {
+    line-height: 2;
+    color: #7b7f82;
+    max-width: 520px;
+    margin: 30px 0 40px;
+}
+section.contact ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+section.contact ul li {
+    font-family: 'Poppins', sans-serif;
+    line-height: 2.25;
+    color: #7b7f82;
+}
+section.contact ul li i {
+    width: 30px;
+}
+section.contact .button {
+    font-size: 1.5rem;
+}
+
+section.solutions {
+    padding: 7rem 0;
+    background: #f0f2f5;
+}
+section.solutions h2 {
+    color: #025d8b;
+    font-size: 2rem;
+    margin: 0 0 50px;
+    line-height: 2;
+}
+section.solutions h2 b {
+    color: #84b825;
+    font-weight: 600;
+}
+section.solutions ul {
+    margin: 0;
+    padding: 50px 0 0;
+    list-style:none;
+}
+section.solutions li {
+    width: 240px;
+    text-align: center;
+}
+section.solutions li b {
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #0b628f;
+    padding-top: 10px;
+	font-family: Montserrat, sans-serif;
+}
+section.solutions ul li .img {
+    width: 120px;
+    height: 120px;
+    background: #ededed;
+    position: relative;
+    border-radius: 120px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+section.solutions ul li .img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+section.solutions ul li a {
+    text-decoration: none;
+}
+section.solutions ul li a:hover .img {
+    background: #84b825;
+}
+section.solutions ul li a:hover .img img {
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+    -moz-transform: brightness(0) invert(1);
+    -ms-transform: brightness(0) invert(1);
+}
+
+section.solutions .slick-prev,
+section.solutions .slick-next {
+    font-family: 'Font Awesome 5 Pro';
+    text-indent: -200px;
+    overflow: hidden;
+    position: absolute;
+    height: 3.75rem;
+    width: 2.5rem;
+    top: 6.875rem;
+    cursor: pointer;
+}
+section.solutions .slick-prev::before,
+section.solutions .slick-next::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0;
+    font-size: 3.75rem;
+}
+section.solutions .slick-prev {
+    left: -10rem;
+}
+section.solutions .slick-next {
+    right:  -10rem;
+}
+section.solutions .slick-prev::before {
+    content: '\f053';
+}
+section.solutions .slick-next::before {
+    content: '\f054';
+}
+section.solutions .slick-prev,
+section.solutions .slick-next {
+    color: #025d8b;
+}
+.instagram a:hover,
+section.solutions .slick-prev:hover,
+section.solutions .slick-next:hover {
+    color: #025d8b;
+}
+
+
+footer {
+	font-family: Montserrat, sans-serif;
+    color: #7b7f82;
+    padding: 30px 0;
+    line-height: 1.5;
+    background-color: #e1e5e6;
+    
+}
+
+
+@media (max-width: 1020px) {
+    section.contact > div:before {
+        width: 50%;
+    }
+
+    section.solutions .slick-prev {
+        left: 0;
+    }
+    section.solutions .slick-next {
+        right: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    header .logo {
+        width:90px
+    }
+
+    header .phone a.fale,
+    header .phone span.others {
+        display: none;
+    }
+
+    section.contact > div:before {
+        display: none;
+    }
+
+    section.quality {
+        margin-bottom:14px
+    }
+
+    section.quality h2 {
+        margin-top:0
+    }
+
+    section.quality ul {
+        margin-top:60px
+    }
+
+    section.info p {
+        margin-top: 80px;
+    }
+
+    .button {
+        padding: 1.8rem 0;
+        min-width: 100%
+    }
+
+    section.solutions li {
+        width: 100%;
+    }
+    section.solutions .grid-container.icons,
+    section.solutions .grid-padding-x.icons>.cell {
+        padding: 0;
+    }
+
+
+    button.slick-prev, button.slick-next,
+    button.slick-prev, button.slick-next {
+        display: none !important;
+    }
+}
+
